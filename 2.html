@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Kartvizit 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif;}
+        .card2 {background: #fff; border-radius: 24px; box-shadow: 0 8px 32px rgba(253,160,133,0.18); padding: 2.5rem 2rem; max-width: 370px; width: 100%; text-align: left;}
+        .logo {width: 70px; height: 70px; border-radius: 12px; object-fit: cover; margin-bottom: 1.2rem; border: 3px solid #fda085;}
+        .company {font-size: 1.4rem; font-weight: 700; color: #fda085; margin-bottom: 0.3rem;}
+        .desc {font-size: 1.05rem; color: #232526; margin-bottom: 1.2rem;}
+        .info {font-size: 1rem; color: #232526; margin-bottom: 0.7rem;}
+        .links {display: flex; gap: 0.7rem;}
+        .link-btn {display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: #fda085; color: #fff; text-decoration: none; padding: 0.6rem 1rem; border-radius: 10px; font-weight: 600; font-size: 1rem; transition: background 0.2s, transform 0.2s;}
+        .link-btn:hover {background: #f6d365; color: #232526;}
+        .icon {width: 20px; height: 20px; filter: invert(1);}
+        @media (max-width: 480px) {.card2 {padding: 1.2rem 0.3rem;}}
+    </style>
+</head>
+<body>
+    <div class="card2">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" class="logo">
+        <div class="company">Firma 2</div>
+        <div class="desc">Sektöründe lider, müşteri odaklı.</div>
+        <div class="info">info@firma2.com<br>+90 555 222 22 22</div>
+        <div class="links">
+            <a class="link-btn" href="https://instagram.com/firma2" target="_blank"><img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="filter: invert(1);"> Instagram</a>
+            <a class="link-btn" href="https://wa.me/905552222222" target="_blank"><img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="filter: invert(1);"> WhatsApp</a>
+            <a class="link-btn" href="tel:+905552222222"><svg class="icon" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Ara</a>
+        </div>
+    </div>
+</body>
+</html>

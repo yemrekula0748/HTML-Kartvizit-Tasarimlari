@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Kartvizit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .minimal-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+            padding: 2.2rem 1.7rem;
+            max-width: 370px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+            font-family: 'Inter', sans-serif;
+        }
+        .minimal-title {
+            font-size: 1.5rem;
+            color: #222;
+            margin-bottom: 0.2rem;
+            font-weight: 700;
+        }
+        .desc {
+            color: #666;
+            margin-bottom: 1.1rem;
+            font-size: 1rem;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.1rem 0;
+        }
+        .info-list li {
+            color: #222;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.98rem;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .link-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #fff;
+            color: #222;
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            font-weight: 600;
+            font-size: 0.98rem;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .link-btn:hover {
+            background: #f0f0f0;
+            color: #007bff;
+            box-shadow: 0 2px 8px #007bff22;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+            filter: grayscale(1) brightness(0.3);
+        }
+        @media (max-width: 480px) {
+            .minimal-card { padding: 1rem 0.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="minimal-card">
+        <div class="minimal-title">Minimalist</div>
+        <div class="desc">Sadelik ve fonksiyonellik bir arada.</div>
+        <ul class="info-list">
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.75C3 4.50736 4.00736 3.5 5.25 3.5H18.75C19.9926 3.5 21 4.50736 21 5.75V18.25C21 19.4926 19.9926 20.5 18.75 20.5H5.25C4.00736 20.5 3 19.4926 3 18.25V5.75Z" stroke="#222" stroke-width="2"/><path d="M3 6L12 13L21 6" stroke="#222" stroke-width="2"/></svg> minimal@kart.com</li>
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> +90 555 555 66 77</li>
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#222" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="#222" stroke-width="2"/></svg> Antalya, Türkiye</li>
+        </ul>
+        <div class="links">
+            <a class="link-btn" href="https://wa.me/905555556677" target="_blank">
+                <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+                WhatsApp
+            </a>
+            <a class="link-btn" href="https://instagram.com/minimalkart" target="_blank">
+                <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+                Instagram
+            </a>
+            <a class="link-btn" href="tel:+905555556677">
+                <svg class="icon" viewBox="0 0 24 24" fill="#222" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" fill="#222" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Ara
+            </a>
+            <a class="link-btn" href="https://maps.google.com/?q=36.8969,30.7133" target="_blank">
+                <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlemaps.svg" alt="Konum">
+                Konum
+            </a>
+        </div>
+    </div>
+</body>
+</html>

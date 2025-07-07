@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenar Slider Kartvizit</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+body {background: #f7fafd; min-height: 100vh; display: flex; align-items: center; justify-content: center;}
+.card-slider-edge {background: #fff; border-radius: 28px; box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 2rem 2rem 2rem 0.5rem; max-width: 420px; width: 100%; display: flex; gap: 1.2rem; align-items: center;}
+.slider-edge {position: relative; width: 70px; height: 160px; overflow: hidden; border-radius: 18px; flex-shrink: 0;}
+.slide-edge {display: none; width: 100%; height: 100%; object-fit: cover;}
+.slide-edge.active {display: block;}
+.slider-btn {position: absolute; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.6); color: #fff; border: none; border-radius: 50%; width: 24px; height: 24px; font-size: 0.9rem; cursor: pointer; z-index: 2;}
+.slider-btn.up {top: 6px;}
+.slider-btn.down {bottom: 6px;}
+.card-content {flex: 1; text-align: left;}
+.card-title {font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: #0a2540; font-weight: 700; margin-bottom: 0.2rem;}
+.card-desc {color: #444; margin-bottom: 1.1rem;}
+.info-list {list-style: none; padding: 0; margin: 0 0 1.1rem 0;}
+.info-list li {color: #0a2540; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1rem;}
+.links {display: flex; flex-direction: column; gap: 1rem;}
+.link-btn {display: flex; align-items: center; gap: 0.7rem; background: linear-gradient(90deg, #0a2540 0%, #4f8cff 100%); color: #fff; text-decoration: none; padding: 0.7rem 1.2rem; border-radius: 12px; font-weight: 600; font-size: 1rem; transition: background 0.2s, transform 0.2s;}
+.link-btn:hover {background: linear-gradient(90deg, #4f8cff 0%, #0a2540 100%); transform: scale(1.03);}
+.icon {width: 22px; height: 22px; filter: invert(0.8);}
+@media (max-width: 480px) {.card-slider-edge {flex-direction: column; gap: 0.5rem; padding: 1rem 0.5rem;} .slider-edge {width: 100%; height: 70px;}}
+</style>
+</head>
+<body>
+<div class="card-slider-edge">
+  <div class="slider-edge" id="sliderEdge">
+    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="slide-edge active" alt="slide1">
+    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" class="slide-edge" alt="slide2">
+    <button class="slider-btn up" onclick="prevSlideEdge()">&#8593;</button>
+    <button class="slider-btn down" onclick="nextSlideEdge()">&#8595;</button>
+  </div>
+  <div class="card-content">
+    <div class="card-title">Kenar Slider</div>
+    <div class="card-desc">Kartvizitin kenarında slider alanı.</div>
+    <ul class="info-list">
+      <li><svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.75C3 4.50736 4.00736 3.5 5.25 3.5H18.75C19.9926 3.5 21 4.50736 21 5.75V18.25C21 19.4926 19.9926 20.5 18.75 20.5H5.25C4.00736 20.5 3 19.4926 3 18.25V5.75Z" stroke="#0a2540" stroke-width="2"/><path d="M3 6L12 13L21 6" stroke="#0a2540" stroke-width="2"/></svg> slider@kenar.com</li>
+      <li><svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" stroke="#0a2540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> +90 555 777 88 99</li>
+      <li><svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#0a2540" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="#0a2540" stroke-width="2"/></svg> Edirne, Türkiye</li>
+    </ul>
+    <div class="links">
+      <a class="link-btn" href="https://wa.me/905557778899" target="_blank"><img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">WhatsApp</a>
+      <a class="link-btn" href="https://instagram.com/kenarslider" target="_blank"><img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">Instagram</a>
+      <a class="link-btn" href="tel:+905557778899"><svg class="icon" viewBox="0 0 24 24" fill="#0a2540" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" fill="#0a2540" stroke="#0a2540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ara</a>
+      <a class="link-btn" href="https://maps.google.com/?q=41.6771,26.5557" target="_blank"><img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlemaps.svg" alt="Konum">Konum</a>
+    </div>
+  </div>
+</div>
+<script>
+let currentSlideEdge = 0;
+const slidesEdge = document.querySelectorAll('.slide-edge');
+function showSlideEdge(index) {slidesEdge.forEach((slide, i) => {slide.classList.toggle('active', i === index);});}
+function prevSlideEdge() {currentSlideEdge = (currentSlideEdge - 1 + slidesEdge.length) % slidesEdge.length; showSlideEdge(currentSlideEdge);}
+function nextSlideEdge() {currentSlideEdge = (currentSlideEdge + 1) % slidesEdge.length; showSlideEdge(currentSlideEdge);}
+</script>
+</body>
+</html>

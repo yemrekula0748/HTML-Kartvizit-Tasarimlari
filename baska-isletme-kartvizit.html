@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern İşletme Kartvizit (Sliderli)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .slider-card {
+            background: #fff;
+            border-radius: 28px;
+            box-shadow: 0 8px 32px rgba(35,37,38,0.18);
+            padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            transition: box-shadow 0.3s;
+            position: relative;
+        }
+        .slider-card:hover {
+            box-shadow: 0 16px 48px rgba(35,37,38,0.28);
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            margin-bottom: 1.2rem;
+            overflow: hidden;
+            border-radius: 18px;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slide.active {
+            display: block;
+        }
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(35,37,38,0.7);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .slider-btn.left { left: 10px; }
+        .slider-btn.right { right: 10px; }
+        .company {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #232526;
+            margin-bottom: 0.2rem;
+        }
+        .desc {
+            font-size: 1.08rem;
+            color: #414345;
+            margin-bottom: 1.1rem;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.3rem 0;
+        }
+        .info-list li {
+            font-size: 1rem;
+            color: #232526;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            background: linear-gradient(90deg, #232526 0%, #414345 100%);
+            color: #fff;
+            text-decoration: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .link-btn:hover {
+            background: linear-gradient(90deg, #414345 0%, #232526 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .icon {
+            width: 22px;
+            height: 22px;
+            filter: invert(1);
+        }
+        @media (max-width: 480px) {
+            .slider-card {
+                padding: 1.5rem 0.5rem;
+            }
+            .slider {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-card">
+        <div class="slider" id="slider">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="slide active" alt="slide1">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="slide" alt="slide2">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" class="slide" alt="slide3">
+            <button class="slider-btn left" onclick="prevSlide()">&#8592;</button>
+            <button class="slider-btn right" onclick="nextSlide()">&#8594;</button>
+        </div>
+        <div class="company">Başka İşletme</div>
+        <div class="desc">Modern ve yenilikçi çözümler sunar.</div>
+        <ul class="info-list">
+            <li>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.75C3 4.50736 4.00736 3.5 5.25 3.5H18.75C19.9926 3.5 21 4.50736 21 5.75V18.25C21 19.4926 19.9926 20.5 18.75 20.5H5.25C4.00736 20.5 3 19.4926 3 18.25V5.75Z" stroke="#fff" stroke-width="2"/><path d="M3 6L12 13L21 6" stroke="#fff" stroke-width="2"/></svg>
+                info@baska.com
+            </li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                +90 555 111 22 33
+            </li>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#fff" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="#fff" stroke-width="2"/></svg>
+                Ankara, Türkiye
+            </li>
+        </ul>
+        <div class="links">
+            <a class="link-btn" href="https://wa.me/905551112233" target="_blank">
+                <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="filter: invert(1);">
+                WhatsApp
+            </a>
+            <a class="link-btn" href="https://instagram.com/baskaisletme" target="_blank">
+                <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="filter: invert(1);">
+                Instagram
+            </a>
+            <a class="link-btn" href="tel:+905551112233">
+                <svg class="icon" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Ara
+            </a>
+            <a class="link-btn" href="https://maps.google.com/?q=39.9334,32.8597" target="_blank">
+                <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlemaps.svg" alt="Konum" style="filter: invert(1);">
+                Konum
+            </a>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+    </script>
+</body>
+</html>
