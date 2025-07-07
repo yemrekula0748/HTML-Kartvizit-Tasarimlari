@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÖRNEK FİRMA - Örnek İsim SOYAD</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .business-card {
+            width: 800px;
+            height: 450px;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+        .left-section {
+            width: 40%;
+            background-color: #d32f2f;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .right-section {
+            width: 60%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .logo-subtext {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .photo-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            border: 5px solid white;
+            overflow: hidden;
+            border-radius: 2px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .title {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .contact-item {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .contact-item:hover {
+            color: #d32f2f;
+        }
+        .icon {
+            margin-right: 15px;
+            font-size: 20px;
+            width: 20px;
+            text-align: center;
+        }
+        .address {
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            .business-card {
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+                max-width: 400px;
+            }
+            
+            .left-section {
+                width: 100%;
+                padding: 30px 20px;
+                text-align: center;
+            }
+            
+            .right-section {
+                width: 100%;
+                padding: 30px 20px;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+            
+            .logo-subtext {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+            
+            .photo-container {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .name {
+                font-size: 20px;
+                margin-top: 15px;
+            }
+            
+            .title {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            
+            .contact-item {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+            
+            .icon {
+                margin-right: 10px;
+                font-size: 16px;
+            }
+            
+            .address {
+                margin-top: 0;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .business-card {
+                margin: 10px;
+            }
+            
+            .left-section,
+            .right-section {
+                padding: 20px 15px;
+            }
+            
+            .logo {
+                font-size: 20px;
+            }
+            
+            .logo-subtext {
+                font-size: 10px;
+            }
+            
+            .photo-container {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .name {
+                font-size: 18px;
+            }
+            
+            .title {
+                font-size: 13px;
+            }
+            
+            .contact-item {
+                font-size: 13px;
+            }
+            
+            .address {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="business-card">
+        <div class="left-section">
+            <div>
+                <div class="logo">ÖRNEK FİRMA</div>
+                <div class="logo-subtext">ÖRNEK SECTOR — ÖRNEK HİZMETLER</div>
+            </div>
+            <div class="photo-container">
+                <img src="https://i.ibb.co/9NQX1Qr/businessman-avatar.jpg" class="profile-photo" alt="Örnek İsim">
+            </div>
+            <div>
+                <div class="name">Örnek İsim SOYAD</div>
+                <div class="title">ÖRNEK POZISYON</div>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="contact-item" onclick="window.location.href='tel:+905001234567'">
+                <span class="icon">📱</span>
+                <span>+90 500 123 45 67</span>
+            </div>
+            
+            <div class="contact-item" onclick="window.location.href='tel:+902121234567'">
+                <span class="icon">📞</span>
+                <span>+90 212 123 45 67</span>
+            </div>
+            
+            <div class="contact-item" onclick="window.location.href='mailto:ornekisim@ornekeposta.com'">
+                <span class="icon">✉️</span>
+                <span>ornekisim@ornekeposta.com</span>
+            </div>
+            
+            <div class="contact-item" onclick="window.location.href='https://www.ornekfirma.com'">
+                <span class="icon">🌐</span>
+                <span>www.ornekfirma.com</span>
+            </div>
+            
+            <div class="contact-item" onclick="window.location.href='https://www.google.com/maps/search/?api=1&query=Örnek+Mahallesi,+Örnek+Caddesi,+No:+123/A+Örnek+İlçe+-+Örnek+İl'">
+                <span class="icon">📍</span>
+                <div class="address">
+                    Örnek Mahallesi, Örnek Caddesi,<br>
+                    No: 123/A Örnek İlçe - Örnek İl / TÜRKİYE
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
